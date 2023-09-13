@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica-Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/components.css">
+</head>
+
+<body>
+
+    <!--Agregamos el componente Navbar que la documentacion de Bootstrap nos proporciona
+
+    Se eliminan algunos elementos que, por el momento, no vamos a utilizar
+    Simplemente dejamos aquellos que nos serviran realmente como elementos de navegacion dentro de nuestro sitio
+    
+    IMPORTANTE: los elementos de navegacion que se encuentran dentro de nuestra barra de navegacion no es necesario
+    se agregue el atributo target="_blank" ya que en este caso no nos sirve para mejorar la experiencia de usuario,
+    aunque esto puede variar dependiendo de lo que busquemos implementar en nuestro proyecto
+    -->
+    <nav class="navbar navbar-expand-sm" id="NavPrincipal">
+        <div class="container">
+            <a class="navbar-brand" href="../bootstrap.html">Intro</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../html/components.html">Practica</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!--Titular principal dentro del cuerpo de la pagina-->
+    <h1>Perfil general</h1>
+
+
+    <!--Contenedor principal/general de los componentes que se van a agregar para esta practica
+    'card' y 'list group' tal como se indica en los objetivos de la sesion
+    
+    Se secciona de la siguiente forma
+
+    <div class="container">
+    Abre el contenedor que sera acomodado/interpretado como una sola fila
+
+    <div class="row">
+    Se abre el contenedor que indica donde comienza la fila, en este caso, solo tendremos una.
+    Dentro de esta fila necesitaremos establecer 2 columnas diferentes, por defecto, boostrap le proporciona
+    6 columnas a cada una de estas columnas
+
+    Columna 1 - Izquierda
+    <div class="col-sm" id="Tarjeta">
+    En este contenedor, indicamos la primera de nuestras columnas, se acomodara automaticamente del lado izquierdo
+    al derecho segun se coloquen
+    Comenzamos por nuestro primer componente 'card' el cual simplemente añadimos desde la documentacion de Bootstrap
+
+    Columna 2 - Derecha
+    <div class="col-sm" id="Lista">
+    En este contenedor se indica que se trata de la segunda de las columnas donde anidaremos nuestro componente
+    'list group' y se muestra en el lado derecho de la pantala
+    -->
+
+    <div class="container" id="GeneralContainer">
+        <div class="row">
+            <div class="col-sm" id="ColumnaIzq">
+                <div class="card mx-auto" style="width: 325px;" id="Tarjeta">
+                    <img src="../assets/FerAguilar.webp" class="card-img-top" alt="Imagen Fernando Aguilar"
+                        height="300px">
+                    <div class="card-body">
+                        <h4>Fernando Aguilar</h4>
+                        <h5 class="card-title">Desarrollador Full-Stack</h5>
+                        <p class="card-text">Formacion en Generation Mexico CH15 (Jun - Ago, 2022)</p>
+                        <a href="https://github.com/FernandoAguilar-1901" class="btn btn-primary" target="_blank"
+                            id="GitButton">GitHub</a>
+                        <a href="https://www.linkedin.com/in/fernando-alberto-aguilar-cano-91a543247/"
+                            class="btn btn-primary" target="_blank" id="LinkedinButton">Linkedin</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm" id="Lista">
+                <h2>Intereses: </h2>
+                <h3>Desarrollo Frontend</h3>
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-danger">HTML5</li>
+                    <li class="list-group-item list-group-item-danger">CSS3</li>
+                    <li class="list-group-item list-group-item-danger">JavaScript</li>
+                    <li class="list-group-item list-group-item-danger">Bootstrap 5</li>
+                    <li class="list-group-item list-group-item-danger">React.js</li>
+                </ul>
+                <h3>Desarrollo Backend</h3>
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-danger">JAVA</li>
+                    <li class="list-group-item list-group-item-danger">SQL</li>
+                    <li class="list-group-item list-group-item-danger">Spring Boot</li>
+                </ul>
+                <h3>Control de versiones</h3>
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-danger">Git</li>
+                    <li class="list-group-item list-group-item-danger">GitBash</li>
+                    <li class="list-group-item list-group-item-danger">GitHub</li>
+                </ul>
+                <h3>Idiomas y cultura</h3>
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-danger">Ingles - C1</li>
+                    <li class="list-group-item list-group-item-danger">Frances - B2</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

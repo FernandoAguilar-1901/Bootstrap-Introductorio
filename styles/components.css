@@ -1,0 +1,159 @@
+/*
+Estilos para el archivo components.html
+
+Estilos para la estructura general del proyecto
+Para el color de fondo se quita el color blanco estandar para evitar cansancio en la vista
+El elemento H1 recibe estilos y propiiedades que mejoran su orden visual/grafico
+*/
+
+
+body {
+    background-color: #FBFAF5;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+
+/*Estilos aplicados para la barra de navegacion
+
+
+Linea 24 HTML
+
+Barra de navegacion id="NavPrincipal", se hace referencia al elemento <nav> para cambiar su color de fondo
+
+clases nav-link, navbar-brand, nav-link, simplemente se cambia el color del texto proporcionado por Bootstrap
+
+Igualmente, se personaliza el estilo de los elementos de navegacion predeterminados para proporcionar originalidad y distincion al proyecto
+añadiendo el evento :hover (cada que se pase el mouse por encima, se apreciara un cambio en el color del texto)
+
+La clase navbar-toggler hace referencia al icono con el menu de hamburguesa que aparece cuando el viewport sea equivalente a una pantalla de celular
+*/
+
+#NavPrincipal {
+    background-color: #ea9f94;
+}
+
+.nav-link,
+.navbar-brand,
+.nav-link {
+    color: #ffffff;
+}
+
+.nav-link:hover,
+.navbar-brand:hover,
+.nav-link:hover {
+    color: #ce0651;
+}
+
+.navbar-toggler {
+    background-color: #ea9f94;
+}
+
+
+/*Estilos aplicados para mejorar la vista de celular de los componentes que se colocaron dentro del contenedor que representa una sola fila con 2 columnas diferentes
+
+Linea 70 HTML
+
+Se hace referencia al contenedor principal de ambos componentes aplicados para esta parte del sitio, que lleva los atributos class="container" y se referencia su ID
+Se agrega un padding en la parte inferior del contenedor para que los elementos visuales no choquen con el fondo de la pagina y quede un espacio libre, que mejora la vista
+
+Linea 72 HTML
+
+Se hace referencia a la primer columna de la fila que forma parte de nuestro contenedor principal. Se manda a llamar su atributo id
+Se agrega un padding inferior al contentenido para que en la vista responsiva de celular no se empalmen los componentes
+
+*/
+
+#GeneralContainer {
+    padding-bottom: 40px;
+}
+
+#ColumnaIzq {
+    padding-bottom: 35px;
+}
+
+/*Estilos aplicados en los elementos que forman parte del componente 'card'
+
+
+Linea 73 HTML
+
+Se manda a llamar el identificador (id) del elemento con el atributo class="card mx-auto"
+Le aplicamos estilos generales que nos ayudaran a homogenizar el diseño de nuestros componentes
+
+Linea 74  HTML
+
+Imagen : la imagen no se encuentra renderizada, por lo cual puede verse un poco extraña.
+Solo se aplica un ancho de 200px y una altura de 225px
+
+Linea 76 HTML
+
+Se aplican estilos al cuerpo (parte inferior del componente 'card')
+El componente se manda a llamar a traves de su atributo class="card-body"
+
+Lineas 80 y 82 HTML
+
+Los elementos de anclaje con sus respectivos atributos id se mandan a llamar para personalizar y quitar el template original que nos brinda bootstrap
+
+En este caso, estos elementos representan los botones que encontramos en la parte inferior del componente 'card' que son hipervinculos que nos llevaran al
+perfil de GitHub y Linkedin indicados.
+Se agregan eventos :hover para modificar su comportamiento cuando el cursor se pase por encima del boton.
+
+*/
+
+img {
+    width: 200px;
+    height: 225px;
+}
+
+#Tarjeta {
+    background-color: #ea9f94;
+    border: 1px solid #ce0651;
+}
+
+.card-body {
+    background-color: #ea9f94;
+    color: #ffffff;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#GitButton,
+#LinkedinButton {
+    background-color: #ce0651;
+    border-color: #ce0651;
+}
+
+#GitButton:hover,
+#LinkedinButton:hover {
+    background-color: #ffffff;
+    color: #ea9f94;
+    border-color: #ea9f94;
+}
+
+/*Estilos aplicados en los elementos que forman parte del componente 'list group'
+
+Linea 87 HTML
+
+Se aplican estilos a la segunda columna de nuestra fila, el componente que personalizamos en este apartado
+es el 'list group', es decir, la lista que contienen los elementos sobre intereses enfocados al desarrollo full
+stack
+
+Linea 91 HTML en adelante (<li>)
+Solo se añade el color de fuente como personalizable para cada elemento list item
+*/
+
+#Lista {
+    background-color: #ea9f94;
+    border: 1px solid #ce0651;
+    color: #ffffff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 20px;
+}
+
+.list-group-item {
+    color: #ce0651;
+}
